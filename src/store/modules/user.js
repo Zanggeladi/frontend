@@ -2,7 +2,7 @@
 
 import {createSlice} from "@reduxjs/toolkit";
 // import login from "@/pages/Login";
-import {request} from "@/utils";
+import {removeToken, request} from "@/utils";
 import {setToken as _setToken, getToken as _getToken} from "@/utils";
 
 const userStore = createSlice({
@@ -21,12 +21,17 @@ const userStore = createSlice({
         },
         setUserInfo(state, action){
             state.userInfo = action.payload
+        },
+        clearUserInfo(state){
+            state.token = ''
+            state.userInfo = {}
+            removeToken()
         }
     }
 })
 
 //解构出actionCreator
-const {setToken, setUserInfo} = userStore.actions
+const {setToken, setUserInfo, clearUserInfo} = userStore.actions
 
 //解构出reducer函数
 const userRuducer = userStore.reducer
@@ -52,6 +57,6 @@ const fetchUserInfo = () =>{
 
 
 
-export { fetchLogin, fetchUserInfo, setToken }
+export { fetchLogin, fetchUserInfo, clearUserInfo }
 
 export default userRuducer
