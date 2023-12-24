@@ -14,6 +14,7 @@ import 'normalize.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+    // 严格模式下会自动重复执行一次？
   <React.StrictMode>
       <Provider store={store}>
           <RouterProvider router={router} />
