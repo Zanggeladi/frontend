@@ -17,7 +17,7 @@ const router = createBrowserRouter([
         element:<AuthRoute> <GeekLayout/> </AuthRoute>,
         children:[
             {
-                path:'home',
+                index:true,
                 element:<Home />
             },
             {
