@@ -1,6 +1,6 @@
 import './index.scss'
 import {Card, Form, Input, Button, message} from 'antd'
-import logo from '@/assets/logo.png'
+import logo from '@/assets/logo1.png'
 import {useDispatch} from "react-redux";
 import {fetchLogin} from "@/store/modules/user";
 import {useNavigate} from "react-router-dom";
@@ -13,6 +13,7 @@ const Login = () => {
         //触发异步action fetchLogin
         dispatch(fetchLogin(values))
 
+        console.log('尝试跳转')
         //1.跳转到首页
         navigate('/')
         //2.提示登录成功
