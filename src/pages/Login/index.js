@@ -11,13 +11,19 @@ const Login = () => {
     const onFinish = (values) =>{
         console.log(values)
         //触发异步action fetchLogin
-        dispatch(fetchLogin(values))
+        dispatch(fetchLogin(values)).then(() =>{
+            console.log('尝试跳转')
+            //1.跳转到首页
+            navigate('/')
+            //2.提示登录成功
+            message.success('登录成功')
+        })
 
-        console.log('尝试跳转')
-        //1.跳转到首页
-        navigate('/')
-        //2.提示登录成功
-        message.success('登录成功')
+        // console.log('尝试跳转')
+        // //1.跳转到首页
+        // navigate('/')
+        // //2.提示登录成功
+        // message.success('登录成功')
     }
     return (
         <div className="login">
