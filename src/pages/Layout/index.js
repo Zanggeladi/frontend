@@ -38,15 +38,23 @@ const items = [
         icon: <HomeOutlined />,
     },
     {
-        label: '任务管理',
+        label: '文章管理',
         key: '/article',
         icon: <DiffOutlined />,
     },
     {
-        label: '创建任务',
+        label: '创建文章',
         key: '/publish',
         icon: <EditOutlined />,
-    },
+    },{
+        label: '结果展示',
+        key: '/show',
+        icon: <DiffOutlined />,
+    },{
+        label: '创建任务',
+        key: '/tasksubmission',
+        icon: <EditOutlined />,
+    }
 ]
 
 const GeekLayout = () => {

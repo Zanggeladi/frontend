@@ -1,5 +1,5 @@
-import * as echarts from 'echarts';
-import {useEffect} from "react";
+// import * as echarts from 'echarts';
+// import {useEffect} from "react";
 import {GraphChart} from "@/pages/Home/components/GraphChart";
 
 const nodeData = [

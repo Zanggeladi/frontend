@@ -8,6 +8,8 @@ import GeekLayout from "@/pages/Layout";
 import Home from "@/pages/Home";
 import Article from "@/pages/Article";
 import Publish from "@/pages/Publish";
+import Show from "@/pages/Show";
+import TaskSubmission from "@/pages/TaskSubmission";
 
 //配置路由实例
 
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
             {
                 path:'publish',
                 element:<Publish />
+            },
+            {
+                path:'show',
+                element:<Show />
+            },
+            {
+                path:'tasksubmission',
+                element:<TaskSubmission />
             }
         ]
     },

@@ -12,8 +12,8 @@ const request = axios.create({
     timeout:5000
 })
 
-// 添加请求拦截器
 
+// 添加请求拦截器
 //在请求发送之前，做拦截，插入一些自定义的配置【例如参数的处理】
 request.interceptors.request.use((config)=> {
     //操作config，注入token数据
@@ -29,6 +29,7 @@ request.interceptors.request.use((config)=> {
 }, (error)=> {
     return Promise.reject(error)
 })
+
 
 // 添加响应拦截器
 //在响应返回到客户端之前，做拦截，重点处理返回后的数据

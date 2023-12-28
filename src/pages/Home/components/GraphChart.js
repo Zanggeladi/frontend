@@ -46,7 +46,7 @@ const GraphChart = ({title, nodeData, linkData, style = { width: '800px', height
 
         //根据图表参数进行渲染
         option && myChart.setOption(option);
-    }, [])
+    }, [linkData, nodeData, title])
     return <div ref={chartRef} style={style}></div>
 
 }
